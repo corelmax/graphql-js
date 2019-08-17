@@ -8,6 +8,6 @@ declare function isFinite(value: mixed): boolean %checks(typeof value ===
 const isFinite =
   Number.isFinite ||
   function(value) {
-    return typeof value === 'number' && isFinite(value);
+    return typeof value === 'number';
   };
 export default isFinite;

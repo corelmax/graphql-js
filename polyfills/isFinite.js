@@ -8,7 +8,7 @@ exports.default = void 0;
 /* eslint-disable no-redeclare */
 // $FlowFixMe workaround for: https://github.com/facebook/flow/issues/4441
 var isFinite = Number.isFinite || function (value) {
-  return typeof value === 'number' && isFinite(value);
+  return typeof value === 'number';
 };
 
 var _default = isFinite;
