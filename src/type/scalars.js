@@ -148,12 +148,7 @@ function serializeString(rawValue: mixed): string {
 }
 
 function coerceString(value: mixed): string {
-  if (typeof value !== 'string') {
-    throw new TypeError(
-      `String cannot represent a non string value: ${inspect(value)}`,
-    );
-  }
-  return value;
+  return serializeString(value);
 }
 
 export const GraphQLString = new GraphQLScalarType({
