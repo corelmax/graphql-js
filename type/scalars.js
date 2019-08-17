@@ -160,11 +160,7 @@ function serializeString(rawValue) {
 }
 
 function coerceString(value) {
-  if (typeof value !== 'string') {
-    throw new TypeError("String cannot represent a non string value: ".concat((0, _inspect.default)(value)));
-  }
-
-  return value;
+  return serializeString(value);
 }
 
 var GraphQLString = new _definition.GraphQLScalarType({
